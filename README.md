@@ -3,17 +3,17 @@ This program will serves as a Noun Group tagger, but uses feature selection and 
 My Python program ```createFeatures.py``` takes two files as input: ```WSJ_02-21.pos-chunk``` (the training corpus) and ```WSJ_24.pos``` (the development corpus). It then outputs two feature files, which are fed into the Maximum Entropy java files: ```training.feature``` and ```test.feature```.
 
 ### How to run the program
-1. Run the Python createFeatures.py: 
-```python createFeatures.py [training corpus input file name] [development / test corpus file name]```
-For example, for the development corpus:
+1. Run the Python createFeatures.py:\
+```python createFeatures.py [training corpus input file name] [development / test corpus file name]```\
+For example, for the development corpus:\
 ```python createFeatures.py WSJ_02-21.pos-chunk WSJ_24.pos```
-2. Compile the Java maximum entropy programs
+2. Compile the Java maximum entropy programs:\
 ```javac -cp maxent-3.0.0.jar;trove.jar *.java```
-3. Creating model of the training data
+3. Creating model of the training data:\
 ```java -cp .;maxent-3.0.0.jar;trove.jar MEtrain training.feature model.chunk```
-4. Creating system output
+4. Creating system output:\
 ```java -cp .;maxent-3.0.0.jar;trove.jar MEtag test.feature model.chunk response.chunk```
-5. Scoring the system results
+5. Scoring the system results:\
 ```py -2 score.chunk.py WSJ_24.pos-chunk response.chunk```
 
 The following sections describe the features I tried and their resulting scores for the development corpus: 
