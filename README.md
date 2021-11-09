@@ -1,5 +1,5 @@
 # NLP HW 5: Sequence Labelling 
-This program will serves as a Noun Group tagger, but uses feature selection and a machine learning algorithm rather than a manually-written algorithm to determine Noun Groups. The machine learning algorithm chosen was Maximum Entropy, and the model is created by running the two java programs ```maxent-3.0.0.jar``` and ```trove.jar```.
+This program serves as a Noun Group tagger, but uses feature selection and a machine learning algorithm rather than a manually-written algorithm to determine Noun Groups. The machine learning algorithm chosen was Maximum Entropy, and the model is created by running the two java programs ```maxent-3.0.0.jar``` and ```trove.jar```.
 My Python program ```createFeatures.py``` takes two files as input: ```WSJ_02-21.pos-chunk``` (the training corpus) and ```WSJ_24.pos``` (the development corpus). It then outputs two feature files, which are fed into the Maximum Entropy java files: ```training.feature``` and ```test.feature```.
 
 ### How to run the program
